@@ -17,7 +17,7 @@ const sortDateBtn = document.getElementById("sortDateBtn");
 const resetOrderBtn = document.getElementById("resetOrderBtn"); 
 
 
-// ===== Event Listeners =====
+// Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   setMinDeadline();   // prevent past dates
   loadTasks();
