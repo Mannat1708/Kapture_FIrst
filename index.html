@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <div class="header">
+      <h1>My To-Do List ✅</h1>
+      <button id="themeToggle">🌙</button>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="date" id="dateInput">
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <!-- Sorting + Clear -->
+    <div class="sorting">
+      <button id="sortPriorityBtn">Sort by Priority</button>
+      <button id="sortDateBtn">Sort by Date</button>
+      <button id="resetOrderBtn">Reset Order</button>
+    </div>
+
+    <!-- Task Columns -->
+    <div class="task-columns">
+      <div class="task-column">
+        <h3>Created</h3>
+        <ul id="createdList" class="taskList"></ul>
+      </div>
+      <div class="task-column">
+        <h3>In Progress</h3>
+        <ul id="progressList" class="taskList"></ul>
+      </div>
+      <div class="task-column">
+        <h3>Completed</h3>
+        <ul id="completedList" class="taskList"></ul>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <p id="taskCounter">0 tasks left</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

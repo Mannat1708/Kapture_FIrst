@@ -1,0 +1,172 @@
+/* ========== Base Styles ========== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Task Input */
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input,
+.task-input select,
+.task-input button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.task-input button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.task-input button:hover {
+  background: #0056b3;
+}
+
+/* Lists */
+.lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+  min-height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: white;
+}
+
+.taskList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0;
+  padding: 0.4rem;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+/* Priority colors */
+.priority-low {
+  border-left: 5px solid green;
+}
+.priority-medium {
+  border-left: 5px solid orange;
+}
+.priority-high {
+  border-left: 5px solid red;
+}
+
+/* Badges */
+.badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: white;
+}
+.priority-badge.low {
+  background: green;
+}
+.priority-badge.medium {
+  background: orange;
+}
+.priority-badge.high {
+  background: red;
+}
+.category-badge {
+  background: #555;
+}
+
+/* Status select + delete btn */
+select {
+  padding: 0.2rem;
+}
+.delete-btn {
+  margin-left: auto;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: darkred;
+}
+
+/* Progress bar */
+.progress-container {
+  margin: 1rem 0;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progressBar {
+  height: 10px;
+  width: 0;
+  background: #28a745;
+  transition: width 0.3s;
+}
+
+/* Theme Toggle */
+#themeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ========== Dark Mode ========== */
+body.dark {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark .taskList {
+  background: #2b2b2b;
+  border-color: #444;
+}
+
+body.dark .taskList li {
+  background: #3a3a3a;
+  color: #ddd;
+}
+
+body.dark .task-input input,
+body.dark .task-input select {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark .task-input button {
+  background: #0056b3;
+}
